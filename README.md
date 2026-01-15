@@ -1,73 +1,94 @@
-# Welcome to your Lovable project
+# VoiceHub - Plataforma de Feedback Anônimo
 
-## Project info
+## 🎯 Sobre o Projeto
 
-**URL**: https://lovable.dev/projects/85410f61-b871-414b-ab7f-7f90e91e7cef
+O **VoiceHub** é uma plataforma web simples e segura para colaboradores enviarem sugestões, críticas e elogios de forma contínua e confidencial. Focado em pequenas empresas, o sistema permite à liderança agir com base em dados reais, garantindo privacidade e segurança total.
 
-## How can I edit this code?
+### Problema que Resolvemos
 
-There are several ways of editing your application.
+- Colaboradores têm medo de represálias ao dar feedback
+- Comunicação interna é fraca ou inexistente
+- Líderes tomam decisões "no escuro"
+- Questões culturais só aparecem quando já viraram crise
 
-**Use Lovable**
+### Nossa Missão
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/85410f61-b871-414b-ab7f-7f90e91e7cef) and start prompting.
+Dar voz aos colaboradores de forma segura, rápida e anônima, construindo um ambiente de trabalho mais transparente e saudável.
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Diferenciais
 
-**Use your preferred IDE**
+- **Anonimato garantido** – sem login, sem rastreamento
+- **Pensado para pequenas empresas** – baixo custo, simplicidade
+- **Insights automáticos com IA** – classificação por tópico (Gestão, Processos, Clima, Elogio)
+- **Interface rápida e amigável** – experiência simples e intuitiva
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Funcionalidades
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Para Colaboradores
+- Envio de feedback via texto livre (crítica, sugestão, elogio)
+- Acesso via link/código único, sem necessidade de login
+- Registro de humor opcional (😃😐😠)
+- Confirmação clara de envio anônimo
 
-Follow these steps:
+### Para Líderes
+- Dashboard com volume de feedbacks e humor geral
+- Visualização de feedbacks em lista somente leitura
+- Classificação automática por tópico usando IA
+- Gráficos e métricas para acompanhamento
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Tecnologias Utilizadas
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **React** - Biblioteca para construção de interfaces
+- **TypeScript** - Tipagem estática para maior segurança
+- **Vite** - Build tool rápido e moderno
+- **Tailwind CSS** - Framework CSS utilitário
+- **shadcn/ui** - Componentes de UI acessíveis
+- **Framer Motion** - Animações fluidas
+- **Recharts** - Gráficos e visualizações
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📱 Páginas
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+| Página | Rota | Descrição |
+|--------|------|-----------|
+| Landing Page | `/` | Apresentação do produto |
+| Feedback | `/feedback` | Formulário anônimo para colaboradores |
+| Dashboard | `/dashboard` | Painel de controle para líderes |
+
+## 🏃‍♂️ Como Executar
+
+```bash
+# Clone o repositório
+git clone <URL_DO_REPOSITÓRIO>
+
+# Acesse a pasta do projeto
+cd voicehub
+
+# Instale as dependências
+npm install
+
+# Execute o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 📦 Deploy
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+O projeto está hospedado na Lovable. Para publicar alterações:
 
-**Use GitHub Codespaces**
+1. Acesse o [projeto na Lovable](https://lovable.dev/projects/85410f61-b871-414b-ab7f-7f90e91e7cef)
+2. Clique em **Share → Publish**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**URL de Produção:** https://culture-key.lovable.app
 
-## What technologies are used for this project?
+## 🤝 Como Queremos Ser Conhecidos
 
-This project is built with:
+> "Plataforma que dá voz à equipe de forma segura e anônima."
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+> "Transparência e inclusão sem expor ninguém."
 
-## How can I deploy this project?
+> "Ouça sua equipe de verdade, sem complicação."
 
-Simply open [Lovable](https://lovable.dev/projects/85410f61-b871-414b-ab7f-7f90e91e7cef) and click on Share -> Publish.
+> "Clima positivo e comunicação clara, do jeito certo."
 
-## Can I connect a custom domain to my Lovable project?
+## 📄 Licença
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Este projeto foi desenvolvido utilizando a plataforma Lovable.
