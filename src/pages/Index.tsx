@@ -54,7 +54,7 @@ const Index = () => {
             <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-display font-bold text-foreground">VoiceHub</span>
+            <span className="text-2xl font-display font-bold text-foreground">Porta Aberta</span>
           </motion.div>
           
           <motion.div
@@ -122,7 +122,7 @@ const Index = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Por que escolher o VoiceHub?
+            Por que escolher a Porta Aberta?
           </h2>
           <p className="text-xl text-muted-foreground">
             Simplicidade, segurança e insights poderosos para sua empresa.
@@ -214,10 +214,10 @@ const Index = () => {
             <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
               <MessageSquare className="w-5 h-5 text-white" />
             </div>
-            <span className="font-display font-bold text-foreground">VoiceHub</span>
+            <span className="font-display font-bold text-foreground">Porta Aberta</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © 2025 VoiceHub. Transparência e inclusão sem expor ninguém.
+            © 2025 Porta Aberta. Transparência e inclusão sem expor ninguém.
           </p>
         </div>
       </footer>

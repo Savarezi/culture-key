@@ -62,7 +62,7 @@ const Dashboard = () => {
             <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center">
               <MessageSquare className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-display font-bold text-foreground">VoiceHub</span>
+            <span className="text-2xl font-display font-bold text-foreground">Porta Aberta</span>
           </Link>
           
           <div className="flex gap-3">

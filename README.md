@@ -1,8 +1,8 @@
-# VoiceHub - Plataforma de Feedback Anônimo
+# Porta Aberta - Plataforma de Feedback Anônimo
 
 ## 🎯 Sobre o Projeto
 
-O **VoiceHub** é uma plataforma web simples e segura para colaboradores enviarem sugestões, críticas e elogios de forma contínua e confidencial. Focado em pequenas empresas, o sistema permite à liderança agir com base em dados reais, garantindo privacidade e segurança total.
+A **Porta Aberta** é uma plataforma web simples e segura para colaboradores enviarem sugestões, críticas e elogios de forma contínua e confidencial. Focado em pequenas empresas, o sistema permite à liderança agir com base em dados reais, garantindo privacidade e segurança total.
 
 ### Problema que Resolvemos
 
