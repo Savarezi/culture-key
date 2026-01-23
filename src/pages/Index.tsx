@@ -93,10 +93,11 @@ const Index = () => {
               transition={{ delay: 0.2 }}
             >
               <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
-                Pessoas em{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Primeiro Lugar
+                  Porta Aberta
                 </span>
+                <br />
+                <span className="text-3xl md:text-5xl">Pessoas em Primeiro Lugar</span>
               </h1>
             </motion.div>
             
