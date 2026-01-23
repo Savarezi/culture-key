@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Shield, MessageSquare, BarChart3, Zap, Lock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroTeamImage from "@/assets/hero-team.jpg";
 
 const Index = () => {
   const features = [
@@ -73,43 +74,55 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
-              Dê voz à sua equipe de{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                forma segura
-              </span>
-            </h1>
-          </motion.div>
-          
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed"
-          >
-            Feedback anônimo e contínuo para construir uma cultura organizacional mais transparente e saudável.
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Button size="lg" asChild className="bg-gradient-primary border-0 hover:opacity-90 text-lg h-14 px-8">
-              <Link to="/feedback">Comece Agora - É Grátis</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg h-14 px-8">
-              Ver Como Funciona
-            </Button>
-          </motion.div>
+      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroTeamImage})` }}
+        />
+        
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+        
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 py-20 md:py-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
+                Pessoas em{" "}
+                <span className="bg-gradient-primary bg-clip-text text-transparent">
+                  Primeiro Lugar
+                </span>
+              </h1>
+            </motion.div>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed"
+            >
+              Feedback anônimo e contínuo para construir uma cultura organizacional mais transparente e saudável.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <Button size="lg" asChild className="bg-gradient-primary border-0 hover:opacity-90 text-lg h-14 px-8">
+                <Link to="/feedback">Comece Agora - É Grátis</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="text-lg h-14 px-8 bg-white/10 border-white/30 text-white hover:bg-white/20">
+                Ver Como Funciona
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 
