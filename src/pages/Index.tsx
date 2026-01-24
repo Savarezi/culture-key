@@ -4,6 +4,12 @@ import { Card } from "@/components/ui/card";
 import { Shield, MessageSquare, BarChart3, Zap, Lock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroTeamImage from "@/assets/hero-team.jpg";
+import cardAnonymous from "@/assets/card-anonymous.jpg";
+import cardFeedback from "@/assets/card-feedback.jpg";
+import cardAi from "@/assets/card-ai.jpg";
+import cardSpeed from "@/assets/card-speed.jpg";
+import cardSecurity from "@/assets/card-security.jpg";
+import cardTeam from "@/assets/card-team.jpg";
 
 const Index = () => {
   const features = [
@@ -11,21 +17,25 @@ const Index = () => {
       icon: Shield,
       title: "100% Anônimo",
       description: "Sem login, sem rastreamento. Garantia total de privacidade.",
+      bgImage: cardAnonymous,
     },
     {
       icon: MessageSquare,
       title: "Feedback Contínuo",
       description: "Colaboradores expressam opiniões de forma livre e segura.",
+      bgImage: cardFeedback,
     },
     {
       icon: BarChart3,
       title: "Insights com IA",
       description: "Análise automática de sentimentos e categorização de tópicos.",
+      bgImage: cardAi,
     },
     {
       icon: Zap,
       title: "Simples e Rápido",
       description: "Interface intuitiva, sem complicação. Foco no que importa.",
+      bgImage: cardSpeed,
     },
   ];
 
@@ -34,11 +44,13 @@ const Index = () => {
       icon: Lock,
       title: "Segurança Total",
       description: "Nenhum dado pessoal é coletado ou armazenado.",
+      bgImage: cardSecurity,
     },
     {
       icon: Users,
       title: "Para Pequenas Empresas",
       description: "Solução acessível e escalável para equipes de todos os tamanhos.",
+      bgImage: cardTeam,
     },
   ];
 
@@ -157,16 +169,26 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="p-6 h-full hover:shadow-medium transition-all duration-300 border-border/50 bg-card/50 backdrop-blur">
-                <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-7 h-7 text-white" />
+              <Card className="relative h-full overflow-hidden hover:shadow-medium transition-all duration-300 border-border/50">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-20"
+                  style={{ backgroundImage: `url(${feature.bgImage})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-card/40" />
+                
+                {/* Content */}
+                <div className="relative z-10 p-6">
+                  <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mb-4">
+                    <feature.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-display font-semibold text-foreground mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
               </Card>
             </motion.div>
           ))}
@@ -181,18 +203,28 @@ const Index = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2 + index * 0.1 }}
             >
-              <Card className="p-8 h-full hover:shadow-medium transition-all duration-300 border-border/50 bg-card/50 backdrop-blur">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gradient-secondary rounded-xl flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {benefit.description}
-                    </p>
+              <Card className="relative h-full overflow-hidden hover:shadow-medium transition-all duration-300 border-border/50">
+                {/* Background Image */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-20"
+                  style={{ backgroundImage: `url(${benefit.bgImage})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-card/40" />
+                
+                {/* Content */}
+                <div className="relative z-10 p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                      <benefit.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-display font-semibold text-foreground mb-2">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </Card>
