@@ -97,7 +97,7 @@ const Index = () => {
                   Porta Aberta
                 </span>
                 <br />
-                <span className="text-3xl md:text-5xl">Pessoas em Primeiro Lugar</span>
+                <span className="text-3xl md:text-5xl">Confiança em Primeiro Lugar</span>
               </h1>
             </motion.div>
             
@@ -128,7 +128,12 @@ const Index = () => {
       </section>
 
       {/* Features Grid */}
-      <section className="container mx-auto px-4 py-20">
+      <section className="relative py-20 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/10" />
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 50%, hsl(var(--secondary) / 0.15) 0%, transparent 50%)' }} />
+        
+        <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -193,6 +198,7 @@ const Index = () => {
               </Card>
             </motion.div>
           ))}
+        </div>
         </div>
       </section>
 
