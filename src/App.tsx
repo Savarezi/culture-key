@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
+import Institucional from "./pages/Institucional";
 import Index from "./pages/Index";
 import Feedback from "./pages/Feedback";
 import Dashboard from "./pages/Dashboard";
@@ -16,7 +17,8 @@ const App = () => (
       <Toaster />
       <Sonner />
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Institucional />} />
+        <Route path="/plataforma" element={<Index />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/dashboard" element={<Dashboard />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
