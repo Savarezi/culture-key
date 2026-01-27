@@ -14,6 +14,11 @@ import {
   Building2
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import bgHero from "@/assets/bg-hero.jpg";
+import bgAbout from "@/assets/bg-about.jpg";
+import bgPlatform from "@/assets/bg-platform.jpg";
+import bgPartners from "@/assets/bg-partners.jpg";
+import bgContact from "@/assets/bg-contact.jpg";
 
 const Institucional = () => {
   const features = [
@@ -120,8 +125,12 @@ const Institucional = () => {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-hero" />
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${bgHero})` }}
+        />
+        <div className="absolute inset-0 bg-background/80" />
         <div className="absolute inset-0">
           <motion.div
             animate={{ 
@@ -252,8 +261,15 @@ const Institucional = () => {
       </section>
 
       {/* Quem Somos */}
-      <section id="sobre" className="py-24 relative">
-        <div className="container mx-auto px-4">
+      <section id="sobre" className="py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{ backgroundImage: `url(${bgAbout})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div {...fadeInUp} className="max-w-3xl mx-auto text-center mb-16">
             <span className="text-primary font-medium">Quem Somos</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-2 mb-6">
@@ -297,11 +313,13 @@ const Institucional = () => {
       </section>
 
       {/* Plataforma */}
-      <section id="plataforma" className="py-24 bg-muted/30 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-50">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
-        </div>
+      <section id="plataforma" className="py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          style={{ backgroundImage: `url(${bgPlatform})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/90 via-muted/80 to-muted/90" />
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div {...fadeInUp} className="text-center mb-16">
@@ -363,8 +381,15 @@ const Institucional = () => {
       </section>
 
       {/* Parceiros */}
-      <section id="parceiros" className="py-24">
-        <div className="container mx-auto px-4">
+      <section id="parceiros" className="py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+          style={{ backgroundImage: `url(${bgPartners})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <span className="text-primary font-medium">Nossos Parceiros</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-2 mb-6">
@@ -418,8 +443,15 @@ const Institucional = () => {
       </section>
 
       {/* Contato */}
-      <section id="contato" className="py-24 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section id="contato" className="py-24 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          style={{ backgroundImage: `url(${bgContact})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/90 via-muted/80 to-muted/90" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <span className="text-primary font-medium">Contato</span>
             <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground mt-2 mb-6">
