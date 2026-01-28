@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -11,9 +12,11 @@ import {
   MapPin,
   ArrowRight,
   CheckCircle,
-  Building2
+  Building2,
+  UserPlus
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import TypebotDrawer from "@/components/TypebotDrawer";
 import bgHero from "@/assets/bg-hero.jpg";
 import bgAbout from "@/assets/bg-about.jpg";
 import bgPlatform from "@/assets/bg-platform.jpg";
@@ -21,6 +24,8 @@ import bgPartners from "@/assets/bg-partners.jpg";
 import bgContact from "@/assets/bg-contact.jpg";
 
 const Institucional = () => {
+  const [isTypebotOpen, setIsTypebotOpen] = useState(false);
+
   const features = [
     {
       icon: Shield,
@@ -209,6 +214,14 @@ const Institucional = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
+              <Button 
+                size="lg" 
+                onClick={() => setIsTypebotOpen(true)}
+                className="bg-gradient-secondary border-0 hover:opacity-90 text-lg h-14 px-8 group"
+              >
+                <UserPlus className="mr-2 w-5 h-5" />
+                Faça seu Cadastro
+              </Button>
               <Button size="lg" asChild className="bg-gradient-primary border-0 hover:opacity-90 text-lg h-14 px-8 group">
                 <Link to="/login">
                   Sua empresa já tem cadastro?
@@ -593,6 +606,9 @@ const Institucional = () => {
           </div>
         </div>
       </footer>
+
+      {/* Typebot Drawer */}
+      <TypebotDrawer isOpen={isTypebotOpen} onClose={() => setIsTypebotOpen(false)} />
     </div>
   );
 };
